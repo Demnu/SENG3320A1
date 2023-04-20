@@ -42,9 +42,8 @@ public class BigIntegerConstructorRadixTest{
     @Test
     public void whenValidValueAndRadixUnderMin_thenException(){
         Exception exception = assertThrows(RuntimeException.class, () -> {
-            BigInteger bigInteger = new BigInteger("100",1);
+            BigInteger bigInteger = new BigInteger("101010",1);
         });
         assert(exception instanceof NumberFormatException);
     }
-
 }
